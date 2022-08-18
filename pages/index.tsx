@@ -1,5 +1,5 @@
 const Home = () => {
-  return <div className="py-base container">hello world</div>
+  return <div className="py-base container"></div>
 }
 
 export default Home

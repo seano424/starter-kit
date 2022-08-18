@@ -36,20 +36,32 @@ export default function Header(props: Props) {
     }))
   }, [theme])
 
-  function handleMobileNav() {
+  const handleMobileNav = () => {
     setState((prevState) => ({
       ...prevState,
       isMobileNavOpen: !prevState.isMobileNavOpen,
     }))
   }
 
-  function handleTheme() {
+  const handleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
   return (
-    <nav className="container flex w-full items-center justify-between bg-light/90 py-4 filter backdrop-blur-sm dark:bg-dark/90">
-      <ul className="hidden items-center justify-center gap-12 lg:flex xl:gap-20">
+    <nav className="px-base container z-50 flex h-20 w-full items-center justify-between ">
+      <ul className="lg:w-1/4">
+        <li id="hamburger" className="lg:hidden">
+          <Hamburger
+            label="Show Menu"
+            rounded
+            color={navState.color}
+            size={24}
+            toggled={state.isMobileNavOpen}
+            toggle={handleMobileNav}
+          />
+        </li>
+      </ul>
+      <ul className="hidden items-center justify-center gap-12 lg:flex lg:w-1/2 xl:gap-20">
         {navLinks.map((link) => (
           <li
             className="transform transition-all duration-700 dark:hover:scale-110"
@@ -61,7 +73,10 @@ export default function Header(props: Props) {
           </li>
         ))}
       </ul>
-      <ul className="flex items-center gap-8 text-2xl font-bold uppercase">
+      <ul
+        id="themeButton"
+        className="flex items-center justify-end gap-8 text-2xl font-bold uppercase lg:w-1/4"
+      >
         <li className="flex h-10 w-10 items-center justify-center">
           <button
             aria-label="Button to change color theme"

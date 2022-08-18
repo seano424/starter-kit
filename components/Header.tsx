@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import Image from 'next/image'
 import { Squash as Hamburger } from 'hamburger-react'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
 import { AnimatePresence, m } from 'framer-motion'

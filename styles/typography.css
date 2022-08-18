@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/open-sans-v29-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-regular.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/open-sans-v29-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-700.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-700.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-700.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-700.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/open-sans-v29-latin-800.eot'); /* IE9 Compat Modes */
+  src: local(''),
+    url('/fonts/open-sans-v29-latin-800.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ url('/fonts/open-sans-v29-latin-800.woff2') format('woff2'),
+    /* Super Modern Browsers */ url('/fonts/open-sans-v29-latin-800.woff')
+      format('woff'),
+    /* Modern Browsers */ url('/fonts/open-sans-v29-latin-800.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */
+      url('/fonts/open-sans-v29-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open-sans-fallback';
+  size-adjust: 97.38%;
+  ascent-override: 99%;
+  src: local('Segoe UI');
+}
+
+.h1 {
+  @apply text-3xl font-black sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  font-family: 'Open Sans', Open-sans-fallback, sans-serif;
+}
+.h2 {
+  @apply text-5xl font-extrabold uppercase tracking-tighter md:text-7xl lg:text-8xl;
+}
+
+.h3 {
+  @apply text-2xl font-extrabold tracking-tighter md:text-4xl lg:text-6xl;
+}
+.p {
+  @apply sm:text-lg;
+  font-family: 'Lucida Grande';
+}
+
+.a {
+  @apply rounded-full px-5 py-4 text-xl font-bold text-neutral-700 transition-all duration-300 ease-linear hover:bg-gray-200/60 dark:text-light dark:hover:bg-dark dark:hover:text-gray-100;
+}

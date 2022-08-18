@@ -3,7 +3,11 @@
     @apply m-4 rounded bg-gray-900 p-2 text-white opacity-100 shadow-none;
   }
 
+  .my-base {
+    @apply my-6 sm:my-10 md:my-14;
+  }
+
   .py-base {
-    @apply py-16 lg:py-20 2xl:py-48;
+    @apply py-6 sm:py-10 md:py-14;
   }
 }

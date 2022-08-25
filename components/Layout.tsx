@@ -6,7 +6,7 @@ import Menu from './Menu'
 export default function Layout({ children }) {
   const title = 'My Little Starter Kit'
   return (
-    <div className="flex min-h-screen flex-col bg-light font-open dark:bg-dark dark:text-blue-50">
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>{title}</title>
         <meta name="description" content={title} />
